@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Municipalidad de Anguil</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Panel de Control</h1>
+            <a href="index.html" class="btn-logout"><i class="fa-solid fa-arrow-left"></i> Volver al Sitio</a>
+        </div>
+
+        <!-- Editar Portada -->
+        <div class="admin-section">
+            <h2><i class="fa-solid fa-image"></i> Editar Portada (Hero)</h2>
+            <form id="hero-form">
+                <div class="form-group">
+                    <label>Título Principal</label>
+                    <input type="text" id="hero-title" value="Bienvenido a Anguil">
+                </div>
+                <div class="form-group">
+                    <label>Subtítulo</label>
+                    <input type="text" id="hero-subtitle" value="Un tesoro cultural e histórico en el corazón de La Pampa">
+                </div>
+                <button type="submit" class="btn-save">Guardar Cambios</button>
+            </form>
+        </div>
+
+        <!-- Administrar Noticias -->
+        <div class="admin-section">
+            <h2><i class="fa-solid fa-newspaper"></i> Administrar Noticias</h2>
+            <button class="btn-save" style="margin-bottom: 15px;" onclick="openNewsModal()">+ Nueva Noticia</button>
+            
+            <div id="admin-news-list">
+                <!-- Javascript will populate this -->
+                <div class="news-item">
+                    <span>Residuos - 15 Feb</span>
+                    <div class="news-actions">
+                        <button class="btn-edit"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <!-- Example items -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000';
+
+        // Load data on start
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHero();
+            loadNews();
+        });
+
+        // Hero Logic
+        async function loadHero() {
+            try {
+                const res = await fetch(`${API_URL}/hero`);
+                const data = await res.json();
+                document.getElementById('hero-title').value = data.title;
+                document.getElementById('hero-subtitle').value = data.subtitle;
+            } catch (e) {
+                console.log('Server not running yet');
+            }
+        }
+
+        document.getElementById('hero-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const title = document.getElementById('hero-title').value;
+            const subtitle = document.getElementById('hero-subtitle').value;
+            
+            try {
+                await fetch(`${API_URL}/hero`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ title, subtitle, backgroundImage: "426655625_776041604560417_3568208129794783047_n.jpg" })
+                });
+                alert('¡Portada actualizada correctamente!');
+            } catch (e) {
+                alert('Error: Asegúrate de que el servidor de base de datos esté corriendo (json-server).');
+            }
+        });
+
+        // News Logic
+        async function loadNews() {
+            const container = document.getElementById('admin-news-list');
+            try {
+                const res = await fetch(`${API_URL}/news`);
+                const news = await res.json();
+                
+                container.innerHTML = news.map(item => `
+                    <div class="news-item">
+                        <span>${item.title} - ${item.date}</span>
+                        <div class="news-actions">
+                            <button class="btn-delete" onclick="deleteNews(${item.id})"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (e) {
+                container.innerHTML = '<p style="color:red">No se pudo conectar con la base de datos.</p>';
+            }
+        }
+
+        async function deleteNews(id) {
+            if(confirm('¿Seguro que deseas eliminar esta noticia?')) {
+                await fetch(`${API_URL}/news/${id}`, { method: 'DELETE' });
+                loadNews();
+            }
+        }
+
+        function openNewsModal() {
+            alert('Función para agregar noticia: Implementación pendiente de formulario.');
+        }
+    </script>
+</body>
+</html>

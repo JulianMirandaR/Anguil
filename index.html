@@ -6,6 +6,7 @@
     <meta name="description" content="Sitio web oficial de la Municipalidad de Anguil, provincia de La Pampa, Argentina">
     <meta name="keywords" content="Municipalidad, Anguil, La Pampa, Argentina, Servicios, Noticias, Contacto">
     <title>Municipalidad de Anguil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -16,140 +17,367 @@
         <h1>Bienvenido a la Municipalidad de Anguil</h1>
     </header>
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio-content" class="nav-link">Inicio</a>
+        <a href="#servicios-content" class="nav-link">Servicios</a>
+        <a href="#noticias-content" class="nav-link">Noticias</a>
+        <a href="#contacto-content" class="nav-link">Contacto</a>
     </nav>
-    <div id="inicio">
-        <h2>¡Bienvenido!</h2>
-        <p>Bienvenido al sitio web oficial de la Municipalidad de Anguil. Aquí encontrarás información relevante sobre nuestros servicios, noticias locales y cómo contactarnos.</p>
-    </div>
+    <!-- Contenedor principal para las "subventanas" -->
+    <main id="main-content">
+        
+        <!-- Sección Inicio (incluye bienvenida e información general) -->
+        <section id="inicio-content" class="tab-content">
+            <!-- Hero (Portada) -->
+            <div class="hero">
+                <div class="hero-overlay">
+                    <h1>Bienvenido a Anguil</h1>
+                    <p>Un tesoro cultural e histórico en el corazón de La Pampa</p>
+                    <a href="#contacto-content" class="cta-button" onclick="document.querySelector('a[href=\'#contacto-content\']').click()">Contáctanos</a>
+                </div>
+            </div>
 
+            <!-- Accesos Rápidos -->
+            <div class="quick-access-container">
+                <div class="quick-access-item">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <span>Pagar Tasas</span>
+                </div>
+                <div class="quick-access-item">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Licencias</span>
+                </div>
+                <div class="quick-access-item">
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                    <span>Farmacias</span>
+                </div>
+                <div class="quick-access-item">
+                    <i class="fa-solid fa-bus"></i>
+                    <span>Transporte</span>
+                </div>
+            </div>
 
-    <div id="informacion-general">
-        <h2>Informacion General</h2>
-        <p>Anguil es una pintoresca localidad ubicada en el Departamento Capital de la provincia de La Pampa, en la hermosa región central de Argentina. Situada a lo largo de la emblemática Ruta Nacional 5, a solo 22 km al este de la vibrante ciudad de Santa Rosa, Anguil emerge como un tesoro cultural y histórico en medio de la llanura pampeana.</p>
-        <p>El nombre "Anguil" tiene sus raíces en el mapudungun, el idioma mapuche, y se interpreta como "olivillo-olivillo" o "tierras de olivillo". Esta denominación, rica en significado, evoca los vastos campos cubiertos por la planta de olivillo, cuyo color argentado otorga un matiz único a la región. Sin embargo, algunos historiadores sugieren que el nombre podría referirse también a "caldén seco" o "monte seco", mostrando la diversidad de interpretaciones que enriquecen la historia del lugar.</p>
-        <p>La historia de Anguil se remonta al 2 de diciembre de 1906, fecha en que fue oficialmente fundada por Eduardo y Alberto Castex, distinguidos ciudadanos que dejaron un legado perdurable en la región. La generosa donación de terrenos por parte de los Castex permitió el establecimiento de importantes instituciones como la plaza pública, la Municipalidad, la Comisaría, la iglesia y diversas sociedades culturales.</p>
-        <p>La llegada del ferrocarril, a través del ramal Trenque Lauquen-Santa Rosa del Ferrocarril Oeste, marcó un hito en el desarrollo de Anguil. La Estación del Ferrocarril, cedida por Eduardo Castex, facilitó el fraccionamiento de tierras y el asentamiento de numerosas familias, contribuyendo así al crecimiento y prosperidad de la localidad.</p>
-        <p>En 2006, Anguil celebró con orgullo su centenario desde su fundación, destacando su papel vital como centro urbano en el Departamento Capital. A lo largo de los años, Anguil ha sido testigo de cambios significativos, pero ha mantenido su encanto único y su importancia como punto de encuentro en la región.</p>
-    </div>
+            <div class="inicio-grid">
+                
+                <!-- Columna Izquierda: Palabras del Intendente y Carrusel -->
+                <div class="main-column">
+                    <!-- Palabras del Intendente -->
+                    <div class="mayor-section">
+                        <div class="mayor-image">
+                            <i class="fa-solid fa-user-tie"></i> <!-- Placeholder icon -->
+                        </div>
+                        <div class="mayor-text">
+                            <h3>Palabras del Intendente</h3>
+                            <blockquote>
+                                "Bienvenidos a nuestro sitio web. Trabajamos día a día para hacer de Anguil un lugar mejor para todos, preservando nuestra historia y mirando hacia el futuro. Los invito a explorar nuestros servicios y ser parte de esta comunidad."
+                            </blockquote>
+                            <p class="mayor-name">Daniela Fernandez</p> <!-- Nombre ficticio o a verificar -->
+                            <p class="mayor-title">Intendente de Anguil</p>
+                        </div>
+                    </div>
 
+                    <!-- Carrusel de Imágenes -->
+                    <div class="carousel-container">
+                        <h3>Galería de Imágenes</h3>
+                        <div class="carousel">
+                            <div class="carousel-slide active">
+                                <img src="css/426655625_776041604560417_3568208129794783047_n.jpg" alt="Actividades en Anguil">
+                                <div class="caption">Actividades recreativas en la comunidad</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="css/427511831_776834791147765_3919285735408597875_n.jpg" alt="Servicios Públicos">
+                                <div class="caption">Mantenimiento y limpieza urbana</div>
+                            </div>
+                            <button class="carousel-btn prev">&#10094;</button>
+                            <button class="carousel-btn next">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
 
-    <div id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <ul>
-            <li>Licencias de Conducir</li>
-            <li>Trámites de Impuestos</li>
-            <li>Recogida de Residuos</li>
-            <li>Mantenimiento de Vías Públicas</li>
-        </ul>
-    </div>
+                <!-- Columna Derecha: Clima y Agenda -->
+                <div class="side-column">
+                    <!-- Widget Clima -->
+                    <div class="widget-card weather-widget">
+                        <h3><i class="fa-solid fa-cloud-sun"></i> Clima en Anguil</h3>
+                        <div class="weather-info">
+                            <div class="temp">24°C</div>
+                            <div class="condition">Parcialmente Nublado</div>
+                            <div class="details">Humedad: 45% | Viento: 12 km/h</div>
+                        </div>
+                    </div>
 
-    <div>
-        <h2>Últimas Noticias</h2>  
-        <div id="noticias">
-            <article>
-                <h3>Residuos</h3>
-                <div class="contenido-noticia">
-                    <div class="texto">
-                        <p>El día Lunes 12 el servicio de RECOLECCIÓN DE RESIDUOS funcinará con NORMALIDAD.</p>
+                    <!-- Agenda Cultural -->
+                    <div class="widget-card agenda-widget">
+                        <h3><i class="fa-solid fa-calendar-days"></i> Agenda Cultural</h3>
+                        <ul class="event-list">
+                            <li>
+                                <span class="event-date">15 FEB</span>
+                                <div class="event-info">
+                                    <strong>Feria de Artesanos</strong>
+                                    <span>Plaza San Martín - 18:00hs</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="event-date">22 FEB</span>
+                                <div class="event-info">
+                                    <strong>Cine bajo las estrellas</strong>
+                                    <span>Anfiteatro Municipal - 20:30hs</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="event-date">01 MAR</span>
+                                <div class="event-info">
+                                    <strong>Apertura Sesiones</strong>
+                                    <span>Concejo Deliberante - 19:00hs</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información General (Tarjetas) - Conservado -->
+            <div id="informacion-general">
+                <h2>Conoce Nuestra Historia</h2>
+                <div class="info-description">
+                    <p>Anguil es una pintoresca localidad ubicada en el Departamento Capital de la provincia de La Pampa. Situada a lo largo de la emblemática Ruta Nacional 5, a solo 22 km de Santa Rosa, Anguil emerge como un punto de encuentro vital en la llanura pampeana.</p>
+                </div>
+
+                <div class="info-cards">
+                    <div class="card">
+                        <h3>🌱 Origen del Nombre</h3>
+                        <p>Del mapudungun "olivillo-olivillo". Evoca los vastos campos cubiertos por esta planta de color argentado que matiza la región.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏛️ Fundación</h3>
+                        <p>Fundada el 2 de diciembre de 1906 por Eduardo y Alberto Castex, quienes donaron terrenos para las instituciones clave.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🚂 El Ferrocarril</h3>
+                        <p>La llegada del tren fue un hito que impulsó el desarrollo, facilitando el asentamiento de numerosas familias.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎉 Centenario</h3>
+                        <p>En 2006 celebramos 100 años de historia, manteniendo nuestro encanto único y vitalidad en la región.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <!-- Sección Servicios -->
+        <section id="servicios-content" class="tab-content">
+            <div id="servicios">
+                <h2>Trámites y Servicios</h2>
+                <p class="section-intro">Gestiona tus trámites municipales de forma ágil y sencilla.</p>
+                
+                <div class="services-grid">
+                    <!-- Licencias -->
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa-solid fa-id-card"></i></div>
+                        <h3>Licencia de Conducir</h3>
+                        <p>Solicitá turnos para primera licencia, renovaciones y ampliaciones de categorías.</p>
+                        <a href="#" class="service-link">Ver Requisitos <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Documentos -->
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa-solid fa-address-card"></i></div>
+                        <h3>Trámite de Documento</h3>
+                        <p>Gestión de DNI, Actualizaciones de 14 años y Cambios de Domicilio.</p>
+                        <a href="#" class="service-link">Más Información <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Guía de Ganado -->
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa-solid fa-cow"></i></div>
+                        <h3>Guía de Ganado</h3>
+                        <p>Emisión y control de guías para el traslado y movimiento de hacienda.</p>
+                        <a href="#" class="service-link">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Habilitación -->
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa-solid fa-shop"></i></div>
+                        <h3>Habilitación de Local</h3>
+                        <p>Requisitos y formularios para habilitación de comercios, industrias y servicios.</p>
+                        <a href="#" class="service-link">Iniciar Trámite <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Agua -->
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa-solid fa-faucet-drip"></i></div>
+                        <h3>Agua Potable</h3>
+                        <p>Solicitud de nueva conexión, reclamos técnicos y estado de cuenta del servicio.</p>
+                        <a href="#" class="service-link">Gestión Online <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Sepelio -->
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa-solid fa-dove"></i></div>
+                        <h3>Servicio de Sepelio</h3>
+                        <p>Información, asistencia y acompañamiento en servicios fúnebres municipales.</p>
+                        <a href="#" class="service-link">Información <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Extra Section: Useful Downloads -->
+                <div class="extra-services">
+                    <h3><i class="fa-solid fa-file-pdf"></i> Descarga de Formularios</h3>
+                    <p>Agilizá tus trámites descargando los formularios necesarios desde tu casa.</p>
+                    <div class="download-links">
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Declaración Jurada</a>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Solicitud de Obra</a>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Formularios Impositivos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Noticias -->
+        <section id="noticias-content" class="tab-content">
+            <div>
+                <h2>Últimas Noticias</h2>  
+                <div class="news-carousel-wrapper">
+                    <button id="news-prev" class="news-nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    
+                    <div id="noticias" class="news-scroller">
+                        <article>
+                            <img src="css/427511831_776834791147765_3919285735408597875_n.jpg" alt="Residuos">
+                            <div class="contenido-noticia">
+                                <h3>Residuos</h3>
+                                <div class="texto">
+                                    <p>El día Lunes 12 el servicio de RECOLECCIÓN DE RESIDUOS funcinará con NORMALIDAD.</p>
+                                </div>
+                                <p class="fecha"><i class="fa-regular fa-calendar"></i> 15 de Febrero, 2024</p> 
+                            </div>
+                        </article>
                         
-                    </div>
-                    <div class="imagen">
-                        <img src="css/427511831_776834791147765_3919285735408597875_n.jpg" alt="Residuos">
-                    </div>
-                    <p>Fecha de Publicación: 15 de Febrero, 2024</p> 
-                </div>
-            </article>
-            <article>
-                <h3>¡CIERRE PROVIDA 2024!🌟</h3>
-                <div class="contenido-noticia">
-                    <div class="texto">
-                        <p>A pesar de la tormenta, después de días de intenso calor, logramos disfrutar de un emotivo cierre de colonia junto a los niños y niñas en la pileta. 💦👧👦
-                            Queremos expresar nuestro más sincero agradecimiento a los padres por su constante apoyo y compromiso👨‍👩‍👧‍👦. También extendemos nuestro reconocimiento a todo el equipo de trabajo por su dedicación y esfuerzo incansable🎉. ¡Sigamos construyendo juntos momentos memorables para nuestra comunidad!</p>
-                    </div>
-                    <div class="imagen">
-                        <img src="css/426655625_776041604560417_3568208129794783047_n.jpg" alt="Provida">
-                    </div>
-                    <p>Fecha de Publicación: 05 de Febrero, 2024</p>
-                </div>
-            </article>
-            <article>
-                <h3>¡CIERRE PROVIDA 2024!🌟</h3>
-                <div class="contenido-noticia">
-                    <div class="texto">
-                        <p>A pesar de la tormenta, después de días de intenso calor, logramos disfrutar de un emotivo cierre de colonia junto a los niños y niñas en la pileta. 💦👧👦
-                            Queremos expresar nuestro más sincero agradecimiento a los padres por su constante apoyo y compromiso👨‍👩‍👧‍👦. También extendemos nuestro reconocimiento a todo el equipo de trabajo por su dedicación y esfuerzo incansable🎉. ¡Sigamos construyendo juntos momentos memorables para nuestra comunidad!</p>
-                    </div>
-                    <div class="imagen">
-                        <img src="css/426655625_776041604560417_3568208129794783047_n.jpg" alt="Provida">
-                    </div>
-                    <p>Fecha de Publicación: 05 de Febrero, 2024</p>
-                </div>
-            </article>
-        </div>
-    </div>
-            
-        
+                        <article>
+                            <img src="css/426655625_776041604560417_3568208129794783047_n.jpg" alt="Provida">
+                            <div class="contenido-noticia">
+                                <h3>¡CIERRE PROVIDA 2024!🌟</h3>
+                                <div class="texto">
+                                    <p>Emotivo cierre de colonia junto a los niños y niñas en la pileta. ¡Gracias a todos!</p>
+                                </div>
+                                <p class="fecha"><i class="fa-regular fa-calendar"></i> 05 de Febrero, 2024</p>
+                            </div>
+                        </article>
 
+                        <article>
+                            <img src="css/426655625_776041604560417_3568208129794783047_n.jpg" alt="Provida">
+                            <div class="contenido-noticia">
+                                <h3>¡Verano en Anguil!</h3>
+                                <div class="texto">
+                                    <p>Disfruta de las actividades al aire libre y la pileta municipal todos los fines de semana.</p>
+                                </div>
+                                <p class="fecha"><i class="fa-regular fa-calendar"></i> 02 de Febrero, 2024</p>
+                            </div>
+                        </article>
 
+                        <article>
+                            <div class="no-image-placeholder"><i class="fa-solid fa-newspaper"></i></div>
+                            <div class="contenido-noticia">
+                                <h3>Nuevas luminarias</h3>
+                                <div class="texto">
+                                    <p>Se instalaron luminarias LED en el acceso principal para mayor seguridad.</p>
+                                </div>
+                                <p class="fecha"><i class="fa-regular fa-calendar"></i> 28 de Enero, 2024</p>
+                            </div>
+                        </article>
+                    </div>
 
-    <div id="contacto">
-        <h2>Contacto</h2>
-        <div class="contacto-info">
-            
-            
-            <h3>Datos</h3>
-            <div class="info-adicional">
-                <p><strong>Teléfono:</strong> +02954 49-5348</p>
-                <p><strong>Email:</strong> secretariadegobiernoanguil@gmail.com</p>
-                <p><strong>Dirección:</strong> Bartolome Mitre 323, Anguil, Argentina</p>
-                <p><strong>Horarios:</strong> Lunes a Viernes: 7am - 1pm</p>
-                <!-- Enlaces a redes sociales -->
-                <h3>Redes Sociales</h3>
-                <div class="redes-sociales">
-                    <a href="https://www.facebook.com/municipalidaddeanguil" target="_blank"><img src="css/facebook (1).png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/municipalidaddeanguil?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                        <img src="css/instagram.png" alt="Instagram"></a>
+                    <button id="news-next" class="news-nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-                <!-- Botón de llamada directa (solo visible en dispositivos móviles) -->
-                <a href="tel:+5492954269362" class="boton-llamar">Llamar</a>
-                <!-- Enlace a WhatsApp -->
-                <a href="https://api.whatsapp.com/send?phone=+5492954269362&text=Hola%20Municipalidad%20de%20Anguil,%20quisiera%20más%20información" 
-                class="boton-whatsapp" target="_blank">WhatsApp</a>
             </div>
-            
-            
-            <div class="mapa">
-                <h3>Como llegar</h3>
-                <!-- Mapa interactivo de Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.5649707656658!2d-64.0119497!3d-36.52637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDUzJzU0LjYiVww2NMKwMDAnMzcuNSJX!5e0!3m2!1sen!2sus!4v1645156300116!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <!-- Sección Contacto -->
+        <!-- Sección Contacto -->
+        <section id="contacto-content" class="tab-content">
+            <div id="contacto">
+                <h2>Contáctanos</h2>
+                <div class="contacto-wrapper">
+                    
+                    <!-- Columna 1: Información de Contacto -->
+                    <div class="contacto-column info-col">
+                        <div class="card-contact">
+                            <h3><i class="fa-solid fa-circle-info"></i> Información</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Bartolome Mitre 323, Anguil, Argentina</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>+54 2954 49-5348</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>secretariadegobiernoanguil@gmail.com</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Lunes a Viernes: 7am - 1pm</span>
+                                </li>
+                            </ul>
+
+                            <div class="social-links">
+                                <h3>Síguenos</h3>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/municipalidaddeanguil" target="_blank" class="social-btn facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/municipalidaddeanguil" target="_blank" class="social-btn instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send?phone=+5492954269362" target="_blank" class="social-btn whatsapp">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Mapa -->
+                    <div class="contacto-column map-col">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.5649707656658!2d-64.0119497!3d-36.52637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDUzJzU0LjYiVww2NMKwMDAnMzcuNSJX!5e0!3m2!1sen!2sus!4v1645156300116!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://goo.gl/maps/example" target="_blank" class="btn-map-link">Ver en Google Maps</a>
+                    </div>
+                
+                    <!-- Columna 3: Formulario -->
+                    <div class="contacto-column form-col">
+                        <div class="card-contact form-card">
+                            <h3><i class="fa-solid fa-paper-plane"></i> Envíanos un mensaje</h3>
+                            <form action="enviar.php" method="post" class="contact-form">
+                                <div class="form-group">
+                                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="asunto" placeholder="Asunto" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-           
-            
-             <!-- Formulario de contacto -->
-            <div class="formulario-contacto">
-                <h3>O envíanos un mensaje por aquí</h3>
-                <form action="enviar.php" method="post">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <br>
-                    <input type="email" name="email" placeholder="Correo electrónico" required><br>
-                    <input type="text" name="asunto" placeholder="Asunto" required><br>
-                    <textarea name="mensaje" placeholder="Mensaje" required></textarea><br>
-                    <button type="submit">Enviar mensaje</button>
-                </form>
-            </div>
-        </div>
-        
-        
-    </div>
+        </section>
+    </main>
     <br>
     <br>
     <br>
     <footer>
         <p>&copy; 2024 Municipalidad de Anguil. Todos los derechos reservados.</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

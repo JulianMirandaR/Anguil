@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Bienvenido a Anguil",
+    "subtitle": "Un tesoro cultural e histórico en el corazón de La Pampa",
+    "backgroundImage": "426655625_776041604560417_3568208129794783047_n.jpg"
+  },
+  "news": [
+    {
+      "id": 1,
+      "title": "Residuos",
+      "summary": "El día Lunes 12 el servicio de RECOLECCIÓN DE RESIDUOS funcinará con NORMALIDAD.",
+      "date": "15 de Febrero, 2024",
+      "image": "css/427511831_776834791147765_3919285735408597875_n.jpg"
+    },
+    {
+      "id": 2,
+      "title": "¡CIERRE PROVIDA 2024!🌟",
+      "summary": "Emotivo cierre de colonia junto a los niños y niñas en la pileta. ¡Gracias a todos!",
+      "date": "05 de Febrero, 2024",
+      "image": "css/426655625_776041604560417_3568208129794783047_n.jpg"
+    },
+    {
+      "id": 3,
+      "title": "¡Verano en Anguil!",
+      "summary": "Disfruta de las actividades al aire libre y la pileta municipal todos los fines de semana.",
+      "date": "02 de Febrero, 2024",
+      "image": "css/426655625_776041604560417_3568208129794783047_n.jpg"
+    }
+  ],
+  "services": [
+    { "id": 1, "title": "Licencia de Conducir", "icon": "fa-id-card", "desc": "Solicitá turnos para primera licencia, renovaciones y ampliaciones." },
+    { "id": 2, "title": "Trámite de Documento", "icon": "fa-address-card", "desc": "Gestión de DNI, Actualizaciones de 14 años y Cambios de Domicilio." }
+  ]
+}
