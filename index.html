@@ -95,6 +95,14 @@
 
                 <!-- Columna Derecha: Clima y Agenda -->
                 <div class="side-column">
+                    
+                    <!-- Widget Bomberos (Destacado) -->
+                    <div class="widget-card bomberos-widget">
+                        <h3><i class="fa-solid fa-fire-extinguisher"></i> Bomberos Voluntarios</h3>
+                        <p>Tu colaboración nos equipa. ¡Ayudanos a ayudar!</p>
+                        <a href="#donar" class="btn-donar"><i class="fa-solid fa-heart"></i> Colaborar</a>
+                    </div>
+
                     <!-- Widget Clima -->
                     <div class="widget-card weather-widget">
                         <h3><i class="fa-solid fa-cloud-sun"></i> Clima en Anguil</h3>
@@ -378,6 +386,41 @@
     <footer>
         <p>&copy; 2024 Municipalidad de Anguil. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Modal Donación Bomberos -->
+    <div id="modal-donacion" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header-hero">
+                <i class="fa-solid fa-fire-extinguisher"></i>
+            </div>
+            <h2>Ayudemos a quienes nos cuidan</h2>
+            <p>Tu aporte directo ayuda al mantenimiento de unidades y compra de equipamiento.</p>
+            
+            <div class="datos-bancarios">
+                <div class="dato-item">
+                    <span class="label">Alias:</span>
+                    <span class="valor">BOMBEROS.ANGUIL.MP</span>
+                    <button class="btn-copy"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <div class="dato-item">
+                    <span class="label">CBU:</span>
+                    <span class="valor">0000003100000000000000</span>
+                    <button class="btn-copy"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <div class="dato-item">
+                    <span class="label">Titular:</span>
+                    <span class="valor">Asoc. Bomberos Voluntarios Anguil</span>
+                </div>
+            </div>
+
+            <div class="qr-placeholder">
+                <i class="fa-solid fa-qrcode"></i>
+                <p>Escaneá para pagar con MP</p>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>

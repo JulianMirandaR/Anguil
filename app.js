@@ -121,4 +121,49 @@ document.addEventListener('DOMContentLoaded', () => {
             newsScroller.scrollBy({ left: -320, behavior: 'smooth' });
         });
     }
+
+    // --- POPUP DONATION LOGIC ---
+    const modal = document.getElementById("modal-donacion");
+    const btnDonar = document.querySelector(".btn-donar");
+    const spanClose = document.querySelector(".close-modal");
+
+    // Open Modal
+    if (btnDonar && modal) {
+        btnDonar.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = "block";
+        });
+    }
+
+    // Close Button
+    if (spanClose) {
+        spanClose.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+    }
+
+    // Close on Click Outside
+    window.addEventListener('click', (e) => {
+        if (e.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Copy Functionality
+    document.querySelectorAll('.btn-copy').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const text = btn.previousElementSibling.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                // Visual feedback, change icon briefly or alert
+                const icon = btn.querySelector('i');
+                icon.classList.remove('fa-copy');
+                icon.classList.add('fa-check');
+                setTimeout(() => {
+                    icon.classList.remove('fa-check');
+                    icon.classList.add('fa-copy');
+                }, 2000);
+            });
+        });
+    });
+
 });

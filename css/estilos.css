@@ -896,6 +896,50 @@ article .fecha {
     opacity: 0.9;
 }
 
+
+/* Bomberos Widget Styles */
+.bomberos-widget {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 8px 15px rgba(231, 76, 60, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* Ensure spacing */
+}
+
+.bomberos-widget h3 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+    justify-content: center;
+}
+
+.bomberos-widget p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn-donar {
+    display: inline-block;
+    background: white;
+    color: #c0392b;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-donar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Agenda Widget Styles */
 .event-list {
     list-style: none;
@@ -1096,6 +1140,137 @@ article .fecha {
     background: #2c3e50;
     color: white;
     transform: translateY(-2px);
+}
+
+/* MODAL DONACIÓN STYLES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideDown 0.4s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.close-modal {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header-hero {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    padding: 30px 20px;
+    color: white;
+    font-size: 3rem;
+}
+
+.modal-content h2 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    padding: 0 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.datos-bancarios {
+    background: #f8f9fa;
+    margin: 0 20px 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.dato-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.dato-item .label {
+    font-weight: bold;
+    color: #555;
+}
+
+.dato-item .valor {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    background: #eef;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.btn-copy {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 5px;
+}
+
+.qr-placeholder {
+    margin: 0 20px 30px;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    color: #aaa;
+}
+
+.qr-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* RESPONSIVE */
